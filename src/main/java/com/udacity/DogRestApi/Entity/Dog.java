@@ -14,9 +14,12 @@ public class Dog{
 
     public Dog(long Id, String Name, String Breed, String Origin) {
         this.Id = Id;
-        Name = Name;
-        Breed = Breed;
-        Origin = Origin;
+        this.Name = Name;
+        this.Breed = Breed;
+        this.Origin = Origin;
+    }
+
+    public Dog() {
     }
 
     public long getId() {

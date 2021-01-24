@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+@SuppressWarnings("ALL")
 @RestController
 public class DogController {
 
@@ -33,7 +34,7 @@ public class DogController {
         return new ResponseEntity<List<String>>(list, HttpStatus.OK);
     }
 
-    @GetMapping("/Dog/{Id}/Breed")
+    @GetMapping("{Id}/Breed")
     public ResponseEntity<String> getDogBreedById(@PathVariable Long Id) {
         String string = dogService.retrieveDogBreedById(Id);
         return new ResponseEntity<String>(string, HttpStatus.OK);

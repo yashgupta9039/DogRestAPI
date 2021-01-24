@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public interface DogRepository extends CrudRepository<Dog,Long> {
 
-    @Query("select d.Id, d.Breed from Dog d where d.Id:=Id")
+    @Query("select d.Id, d.Breed from Dog d where d.Id=:Id")
     String findBreedById(Long Id);
 
     @Query("select d.Id, d.Breed from Dog d")
