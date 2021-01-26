@@ -19,5 +19,4 @@ public interface DogRepository extends CrudRepository<Dog,Long> {
     @Query("select d.Id, d.Name from Dog d")
     List<String> findAllName();
 
-
 }
